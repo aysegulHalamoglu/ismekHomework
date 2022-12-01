@@ -3,6 +3,8 @@ package com.halamoglu.ismekhomework
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,5 +30,13 @@ class MainActivity : AppCompatActivity() {
         answerList.add("One Punch Man")
         answerList.add("Demon Slayer: Kimetsu no Yaiba")
         answerList.add("Naruto")
+
+        // Adapter
+        val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
+        recyclerView.layoutManager = LinearLayoutManager(this)
+
+        val adapter = RecyclerViewAdapter(answerList)
+        recyclerView.adapter = adapter
+
     }
 }

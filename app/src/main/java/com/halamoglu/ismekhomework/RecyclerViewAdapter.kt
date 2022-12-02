@@ -1,5 +1,6 @@
 package com.halamoglu.ismekhomework
 
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -22,6 +23,11 @@ class RecyclerViewAdapter( val answerList: ArrayList<String>) : RecyclerView.Ada
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.answerButton.text = answerList.get(position)
+        holder.answerButton.setOnClickListener {
+            holder.answerButton.isSelected = !holder.answerButton.isSelected
+
+        }
+
     }
 
     override fun getItemCount(): Int {

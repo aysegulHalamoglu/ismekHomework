@@ -8,6 +8,9 @@
         android:id="@+id/rv_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
         android:text="Button"
+        android:textColor="@color/button_text_color"
+        android:backgroundTint="@color/button_background_color"
         android:layout_marginHorizontal="10dp"/>
 </LinearLayout>
